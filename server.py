@@ -16,7 +16,7 @@ current_command = None
 last_result = "нема"
 
 # -------- WOL --------
-def wake_on_lan("9C:6B:00:4C:FA:B3")
+def wake_on_lan(mac):
     mac = mac.replace(":", "").replace("-", "")
     data = bytes.fromhex("FF" * 6 + mac * 16)
 
@@ -51,7 +51,7 @@ async def start(msg: types.Message):
 
 @dp.message_handler(commands=["wake"])
 async def wake(msg: types.Message):
-    wake_on_lan("AA:BB:CC:DD:EE:FF")  # ← вставиш MAC
+    wake_on_lan("9C:6B:00:4C:FA:B3")  # ← вставиш MAC
     await msg.answer("ПК вмикається ⚡")
 
 @dp.message_handler(commands=["steam"])
