@@ -9,7 +9,7 @@ import threading
 
 # -------- CONFIG --------
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-SECRET = os.getenv("SECRET") or "123456"
+SECRET = os.getenv("SECRET") or "20111705"
 MAC = os.getenv("MAC") or "9C:6B:00:4C:FA:B3"
 
 logging.basicConfig(level=logging.INFO)
